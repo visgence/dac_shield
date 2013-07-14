@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0  Date: 7/14/2013 2:05:39 PM
+#
+$CMP TCA0372
+D Dual Op amp (low power)
+K ampliop
+F onsemi/mc33178.pdf
+$ENDCMP
+#
+#End Doc Library
