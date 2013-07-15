@@ -1,0 +1,94 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/14/2013 8:16:49 PM
+
+BeginCmp
+TimeStamp = /51E30D77;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = bornier3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E3006B;
+Reference = P1;
+ValeurCmp = SLAVE_SEL;
+IdModule  = pin_array_4x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30EA9;
+Reference = P2;
+ValeurCmp = CONN_2;
+IdModule  = bornier2;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30B0D;
+Reference = R1;
+ValeurCmp = 22k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30B19;
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E3081F;
+Reference = R3;
+ValeurCmp = 10k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30590;
+Reference = R4;
+ValeurCmp = 10k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E307BD;
+Reference = R5;
+ValeurCmp = 12k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30757;
+Reference = R6;
+ValeurCmp = 33k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30660;
+Reference = RV1;
+ValeurCmp = 10k;
+IdModule  = 3PIN_6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E2FC01;
+Reference = SHIELD1;
+ValeurCmp = ARDUINO_SHIELD;
+IdModule  = ARDUINO_SHIELD_2_040pins;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30A12;
+Reference = U1;
+ValeurCmp = LM741;
+IdModule  = DIP-8__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E30546;
+Reference = U2;
+ValeurCmp = TCA0372;
+IdModule  = DIP-8__300_ELL;
+EndCmp
+
+EndListe
