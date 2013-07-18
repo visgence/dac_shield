@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  7/18/2013 11:36:21 AM
+# EESchema Netlist Version 1.1 created  7/18/2013 12:05:40 PM
 (
  ( /51E2FC01 $noname  SHIELD1 ARDUINO_SHIELD {Lib=ARDUINO_SHIELD}
   (    0 ? )
@@ -30,7 +30,7 @@
   (  RST ? )
   ( V_IN ? )
  )
- ( /51E3006B $noname  P1 SLAVE_SEL {Lib=CONN_4X2}
+ ( /51E3006B $noname  JP1 SLAVE_SEL {Lib=CONN_4X2}
   (    1 N-000016 )
   (    2 N-000018 )
   (    3 N-000017 )
@@ -74,31 +74,22 @@
  ( /51E30A12 $noname  U1 LM741 {Lib=LM741}
   (    1 ? )
   (    2 VREF )
-  (    3 N-000011 )
+  (    3 N-000005 )
   (    4 VSS )
   (    5 ? )
   (    6 VREF )
   (    7 VDD )
  )
  ( /51E30B0D $noname  R1 22k {Lib=R}
-  (    1 N-000011 )
+  (    1 N-000005 )
   (    2 VDD )
  )
  ( /51E30B19 $noname  R2 10k {Lib=R}
   (    1 GND )
-  (    2 N-000011 )
- )
- ( /51E30D77 $noname  K1 CONN_3 {Lib=CONN_3}
-  (    1 VDD )
-  (    2 GND )
-  (    3 VSS )
- )
- ( /51E30EA9 $noname  P2 CONN_2 {Lib=CONN_2}
-  (    1 N-000042 )
-  (    2 GND )
+  (    2 N-000005 )
  )
  ( /51E82508 $noname  C1 100n {Lib=C}
-  (    1 N-000011 )
+  (    1 N-000005 )
   (    2 GND )
  )
  ( /51E825BA $noname  C2 47u {Lib=C}
@@ -114,11 +105,11 @@
   (    2 +5V )
  )
  ( /51E827A8 $noname  R8 1k {Lib=R}
-  (    1 N-000008 )
+  (    1 N-000012 )
   (    2 VDD )
  )
  ( /51E827FF $noname  D2 POS {Lib=LED}
-  (    1 N-000008 )
+  (    1 N-000012 )
   (    2 GND )
  )
  ( /51E82914 $noname  R9 1k {Lib=R}
@@ -136,6 +127,21 @@
  ( /51E82CAF $noname  C3 1u {Lib=C}
   (    1 VDD )
   (    2 GND )
+ )
+ ( /51E82EE8 $noname  P1 V+ {Lib=CONN_1}
+  (    1 VDD )
+ )
+ ( /51E82EF5 $noname  P2 GND {Lib=CONN_1}
+  (    1 GND )
+ )
+ ( /51E82EFB $noname  P3 V- {Lib=CONN_1}
+  (    1 VSS )
+ )
+ ( /51E82F0B $noname  P4 Out {Lib=CONN_1}
+  (    1 N-000042 )
+ )
+ ( /51E82F11 $noname  P5 GND {Lib=CONN_1}
+  (    1 GND )
  )
 )
 *
@@ -253,73 +259,73 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 1 "VSS" "VSS"
- K1 3
- U1 4
- D3 2
- C4 2
- U2 4
-Net 3 "VDD" "VDD"
+Net 2 "VDD" "VDD"
  R1 2
- C3 1
  R8 2
+ P1 1
  U2 2
- K1 1
+ C3 1
  U1 7
+Net 3 "VSS" "VSS"
+ C4 2
+ P3 1
+ D3 2
+ U2 4
+ U1 4
 Net 4 "GND" "GND"
- SHIELD1 GND3
- C3 2
- SHIELD1 GND2
- SHIELD1 GND1
- C1 2
- C2 2
  D1 2
+ C2 2
+ SHIELD1 GND3
+ P5 1
  R5 1
- R2 1
- K1 2
- P2 2
- C4 1
+ SHIELD1 GND1
  D2 2
+ SHIELD1 GND2
  R9 2
-Net 6 "VREF" "VREF"
- R3 1
- U1 2
+ R2 1
+ C1 2
+ P2 1
+ C3 2
+ C4 1
+Net 5 "" ""
+ R1 1
+ U1 3
+ C1 1
+ R2 2
+Net 7 "VREF" "VREF"
  U1 6
-Net 8 "" ""
- D2 1
- R8 1
+ U1 2
+ R3 1
 Net 9 "" ""
- R9 1
  D3 1
+ R9 1
 Net 10 "" ""
  R7 1
  D1 1
-Net 11 "" ""
- C1 1
- R2 2
- R1 1
- U1 3
-Net 12 "+5V" "+5V"
- R7 2
+Net 11 "+5V" "+5V"
  SHIELD1 5V
+ R7 2
  C2 1
+Net 12 "" ""
+ R8 1
+ D2 1
 Net 13 "" ""
- P1 5
  SHIELD1 8
+ JP1 5
 Net 16 "" ""
- P1 1
+ JP1 1
  SHIELD1 10
 Net 17 "" ""
- P1 3
+ JP1 3
  SHIELD1 9
 Net 18 "" ""
- P1 8
- P1 6
- P1 4
- P1 2
+ JP1 8
+ JP1 6
+ JP1 4
+ JP1 2
 Net 20 "" ""
+ JP1 7
  SHIELD1 7
- P1 7
 Net 38 "" ""
  U2 6
  U2 1
@@ -332,12 +338,12 @@ Net 40 "" ""
  RV1 2
  U2 5
 Net 41 "" ""
- R6 1
  RV1 3
+ R6 1
 Net 42 "" ""
- P2 1
- U2 3
  R6 2
+ U2 3
+ P4 1
 Net 43 "" ""
  RV1 1
  R5 2
