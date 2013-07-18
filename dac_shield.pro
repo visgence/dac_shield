@@ -1,4 +1,4 @@
-update=7/14/2013 8:13:09 PM
+update=7/18/2013 11:39:56 AM
 version=1
 last_client=cvpcb
 [pcbnew]
@@ -38,6 +38,7 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=arduino_shields
+LibName18=custom
 LibDir=
 [general]
 version=1

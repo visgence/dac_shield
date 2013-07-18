@@ -1,4 +1,53 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/14/2013 8:16:49 PM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/18/2013 11:42:57 AM
+
+BeginCmp
+TimeStamp = /51E82508;
+Reference = C1;
+ValeurCmp = 100n;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E825BA;
+Reference = C2;
+ValeurCmp = 47u;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E82CAF;
+Reference = C3;
+ValeurCmp = 1u;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E82BF5;
+Reference = C4;
+ValeurCmp = 1u;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E82672;
+Reference = D1;
+ValeurCmp = PWR;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E827FF;
+Reference = D2;
+ValeurCmp = POS;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E8296F;
+Reference = D3;
+ValeurCmp = NEG;
+IdModule  = LED-5MM;
+EndCmp
 
 BeginCmp
 TimeStamp = /51E30D77;
@@ -64,10 +113,31 @@ IdModule  = R4;
 EndCmp
 
 BeginCmp
+TimeStamp = /51E8268F;
+Reference = R7;
+ValeurCmp = 1k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E827A8;
+Reference = R8;
+ValeurCmp = 1k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /51E82914;
+Reference = R9;
+ValeurCmp = 1k;
+IdModule  = R4;
+EndCmp
+
+BeginCmp
 TimeStamp = /51E30660;
 Reference = RV1;
 ValeurCmp = 10k;
-IdModule  = 3PIN_6mm;
+IdModule  = Var_resistor;
 EndCmp
 
 BeginCmp
