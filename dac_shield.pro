@@ -1,6 +1,6 @@
-update=7/18/2013 11:39:56 AM
+update=8/4/2013 8:39:50 PM
 version=1
-last_client=cvpcb
+last_client=kicad
 [pcbnew]
 version=1
 LastNetListRead=
@@ -40,8 +40,6 @@ LibName16=valves
 LibName17=arduino_shields
 LibName18=custom
 LibDir=
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -89,3 +87,5 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[general]
+version=1
