@@ -1,377 +1,478 @@
-# EESchema Netlist Version 1.1 created  8/11/2013 11:12:57 AM
-(
- ( /51E2FC01 $noname  SHIELD1 ARDUINO_SHIELD {Lib=ARDUINO_SHIELD}
-  (    0 ? )
-  (    1 ? )
-  (    2 ? )
-  (    3 ? )
-  (    4 ? )
-  (    5 ? )
-  (   5V +5V )
-  (    6 ? )
-  (    7 N-000034 )
-  (    8 N-000035 )
-  (    9 N-000033 )
-  (   10 N-000036 )
-  (   11 MOSI )
-  (   12 ? )
-  (   13 CLK )
-  (  3V3 ? )
-  (  AD0 ? )
-  (  AD1 ? )
-  (  AD2 ? )
-  (  AD3 ? )
-  (  AD4 ? )
-  (  AD5 ? )
-  ( AREF ? )
-  ( GND1 GND )
-  ( GND2 GND )
-  ( GND3 GND )
-  (  RST ? )
-  ( V_IN ? )
- )
- ( /51E3006B $noname  JP1 SLAVE_SEL {Lib=CONN_4X2}
-  (    1 N-000036 )
-  (    2 N-000037 )
-  (    3 N-000033 )
-  (    4 N-000037 )
-  (    5 N-000035 )
-  (    6 N-000037 )
-  (    7 N-000034 )
-  (    8 N-000037 )
- )
- ( /51E30546 $noname  U2 TCA0372 {Lib=TCA0372}
-  (    1 N-000042 )
-  (    2 VDD )
-  (    3 N-000009 )
-  (    4 VSS )
-  (    5 N-000043 )
-  (    6 N-000042 )
-  (    7 DAC_OUT )
-  (    8 N-000041 )
- )
- ( /51E30590 $noname  R4 10k {Lib=R}
-  (    1 N-000041 )
-  (    2 N-000042 )
- )
- ( /51E30660 $noname  RV1 10k {Lib=POT}
-  (    1 N-000039 )
-  (    2 N-000043 )
-  (    3 N-000040 )
- )
- ( /51E30757 $noname  R6 33k {Lib=R}
-  (    1 N-000040 )
-  (    2 N-000009 )
- )
- ( /51E307BD $noname  R5 12k {Lib=R}
-  (    1 GND )
-  (    2 N-000039 )
- )
- ( /51E3081F $noname  R3 10k {Lib=R}
-  (    1 VREF )
-  (    2 N-000041 )
- )
- ( /51E30A12 $noname  U3 LM741 {Lib=LM741}
-  (    1 ? )
-  (    2 VREF )
-  (    3 N-000007 )
-  (    4 VSS )
-  (    5 ? )
-  (    6 VREF )
-  (    7 VDD )
- )
- ( /51E30B0D $noname  R1 22k {Lib=R}
-  (    1 N-000007 )
-  (    2 VDD )
- )
- ( /51E30B19 $noname  R2 10k {Lib=R}
-  (    1 GND )
-  (    2 N-000007 )
- )
- ( /51E82508 $noname  C1 100n {Lib=C}
-  (    1 N-000007 )
-  (    2 GND )
- )
- ( /51E825BA $noname  C2 47u {Lib=C}
-  (    1 +5V )
-  (    2 GND )
- )
- ( /51E82672 $noname  D1 PWR {Lib=LED}
-  (    1 N-000005 )
-  (    2 GND )
- )
- ( /51E8268F $noname  R7 1k {Lib=R}
-  (    1 N-000005 )
-  (    2 +5V )
- )
- ( /51E827A8 $noname  R8 1k {Lib=R}
-  (    1 N-000003 )
-  (    2 VDD )
- )
- ( /51E827FF $noname  D2 POS {Lib=LED}
-  (    1 N-000003 )
-  (    2 GND )
- )
- ( /51E82914 $noname  R9 1k {Lib=R}
-  (    1 N-000004 )
-  (    2 GND )
- )
- ( /51E8296F $noname  D3 NEG {Lib=LED}
-  (    1 N-000004 )
-  (    2 VSS )
- )
- ( /51E82BF5 $noname  C4 1u {Lib=C}
-  (    1 GND )
-  (    2 VSS )
- )
- ( /51E82CAF $noname  C3 1u {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5207C384 $noname  P1 CONN_2 {Lib=CONN_2}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5207C393 $noname  P2 CONN_2 {Lib=CONN_2}
-  (    1 GND )
-  (    2 VSS )
- )
- ( /5207C3A2 $noname  P3 CONN_2 {Lib=CONN_2}
-  (    1 N-000009 )
-  (    2 GND )
- )
- ( /5207C58D $noname  T1 VrefTest {Lib=CONN_1}
-  (    1 VREF )
- )
- ( /5207D003 $noname  U1 MCP4921 {Lib=MCP4921}
-  (    1 +5V )
-  (    2 N-000037 )
-  (    3 CLK )
-  (    4 MOSI )
-  (    5 GND )
-  (    6 VREF )
-  (    7 GND )
-  (    8 DAC_OUT )
- )
-)
-*
-{ Allowed footprints by component:
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R6
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R5
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R7
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R8
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R9
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C4
- SM*
- C?
- C1-1
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$endfootprintlist
-}
-{ Pin List by Nets
-Net 1 "+5V" "+5V"
- R7 2
- SHIELD1 5V
- C2 1
- U1 1
-Net 2 "GND" "GND"
- SHIELD1 GND1
- R9 2
- P1 2
- U1 5
- U1 7
- C4 1
- P2 1
- P3 2
- R5 1
- C1 2
- D2 2
- C2 2
- D1 2
- R2 1
- SHIELD1 GND2
- SHIELD1 GND3
- C3 2
-Net 3 "" ""
- D2 1
- R8 1
-Net 4 "" ""
- R9 1
- D3 1
-Net 5 "" ""
- R7 1
- D1 1
-Net 6 "VREF" "VREF"
- U3 2
- U3 6
- R3 1
- U1 6
- T1 1
-Net 7 "" ""
- R1 1
- R2 2
- C1 1
- U3 3
-Net 9 "" ""
- P3 1
- R6 2
- U2 3
-Net 10 "VSS" "VSS"
- U2 4
- C4 2
- U3 4
- D3 2
- P2 2
-Net 21 "MOSI" "MOSI"
- SHIELD1 11
- U1 4
-Net 22 "CLK" "CLK"
- SHIELD1 13
- U1 3
-Net 24 "VDD" "VDD"
- R1 2
- C3 1
- P1 1
- U3 7
- U2 2
- R8 2
-Net 33 "" ""
- JP1 3
- SHIELD1 9
-Net 34 "" ""
- JP1 7
- SHIELD1 7
-Net 35 "" ""
- JP1 5
- SHIELD1 8
-Net 36 "" ""
- JP1 1
- SHIELD1 10
-Net 37 "" ""
- U1 2
- JP1 2
- JP1 4
- JP1 6
- JP1 8
-Net 38 "DAC_OUT" "DAC_OUT"
- U1 8
- U2 7
-Net 39 "" ""
- RV1 1
- R5 2
-Net 40 "" ""
- RV1 3
- R6 1
-Net 41 "" ""
- U2 8
- R4 1
- R3 2
-Net 42 "" ""
- U2 6
- U2 1
- R4 2
-Net 43 "" ""
- U2 5
- RV1 2
-}
-#End
+(export (version D)
+  (design
+    (source C:/Users/esalazar/git/dac_shield/dac_shield.sch)
+    (date "9/21/2013 1:36:59 PM")
+    (tool "eeschema (2013-07-07 BZR 4022)-stable"))
+  (components
+    (comp (ref SHIELD1)
+      (value ARDUINO_SHIELD)
+      (libsource (lib arduino_shieldsNCL) (part ARDUINO_SHIELD))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E2FC01))
+    (comp (ref JP1)
+      (value SLAVE_SEL)
+      (libsource (lib conn) (part CONN_4X2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E3006B))
+    (comp (ref U2)
+      (value TCA0372)
+      (libsource (lib custom_parts) (part TCA0372))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30546))
+    (comp (ref R4)
+      (value 10k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30590))
+    (comp (ref RV1)
+      (value 10k)
+      (libsource (lib device) (part POT))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30660))
+    (comp (ref R6)
+      (value 33k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30757))
+    (comp (ref R5)
+      (value 12k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E307BD))
+    (comp (ref R3)
+      (value 10k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E3081F))
+    (comp (ref U3)
+      (value LM741)
+      (libsource (lib linear) (part LM741))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30A12))
+    (comp (ref R1)
+      (value 22k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30B0D))
+    (comp (ref R2)
+      (value 10k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E30B19))
+    (comp (ref C1)
+      (value 100n)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E82508))
+    (comp (ref C2)
+      (value 47u)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E825BA))
+    (comp (ref D1)
+      (value PWR)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E82672))
+    (comp (ref R7)
+      (value 1k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E8268F))
+    (comp (ref R8)
+      (value 1k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E827A8))
+    (comp (ref D2)
+      (value POS)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E827FF))
+    (comp (ref R9)
+      (value 1k)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E82914))
+    (comp (ref D3)
+      (value NEG)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E8296F))
+    (comp (ref C4)
+      (value 1u)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E82BF5))
+    (comp (ref C3)
+      (value 1u)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 51E82CAF))
+    (comp (ref P1)
+      (value CONN_2)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5207C384))
+    (comp (ref P2)
+      (value CONN_2)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5207C393))
+    (comp (ref P3)
+      (value CONN_2)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5207C3A2))
+    (comp (ref T1)
+      (value VrefTest)
+      (libsource (lib conn) (part CONN_1))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5207C58D))
+    (comp (ref U1)
+      (value MCP4921)
+      (libsource (lib mcp4921) (part MCP4921))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5207D003))
+    (comp (ref F1)
+      (value FUSE)
+      (libsource (lib device) (part FUSE))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 523DF665)))
+  (libparts
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part FUSE)
+      (fields
+        (field (name Reference) F)
+        (field (name Value) FUSE)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part POT)
+      (description Potentionmetre)
+      (fields
+        (field (name Reference) RV)
+        (field (name Value) POT)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib conn) (part CONN_1)
+      (description "1 pin")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_1))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib conn) (part CONN_2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_2))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
+    (libpart (lib conn) (part CONN_4X2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_4X2))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))
+        (pin (num 4) (name 4) (type passive))
+        (pin (num 5) (name 5) (type passive))
+        (pin (num 6) (name 6) (type passive))
+        (pin (num 7) (name 7) (type passive))
+        (pin (num 8) (name 8) (type passive))))
+    (libpart (lib linear) (part LM741)
+      (description "Op amp")
+      (docs AmpliOp.sch)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) LM741))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name -) (type input))
+        (pin (num 3) (name +) (type input))
+        (pin (num 4) (name V-) (type input))
+        (pin (num 5) (name ~) (type input))
+        (pin (num 6) (name ~) (type output))
+        (pin (num 7) (name V+) (type input))))
+    (libpart (lib arduino_shieldsNCL) (part ARDUINO_SHIELD)
+      (fields
+        (field (name Reference) SHIELD)
+        (field (name Value) ARDUINO_SHIELD))
+      (pins
+        (pin (num 0) (name 0) (type BiDi))
+        (pin (num 1) (name 1) (type BiDi))
+        (pin (num 2) (name 2) (type BiDi))
+        (pin (num 3) (name 3) (type BiDi))
+        (pin (num 4) (name 4) (type BiDi))
+        (pin (num 5) (name 5) (type BiDi))
+        (pin (num 5V) (name 5V) (type power_in))
+        (pin (num 6) (name 6) (type BiDi))
+        (pin (num 7) (name 7) (type BiDi))
+        (pin (num 8) (name 8) (type BiDi))
+        (pin (num 9) (name 9) (type BiDi))
+        (pin (num 10) (name 10) (type BiDi))
+        (pin (num 11) (name 11) (type BiDi))
+        (pin (num 12) (name 12) (type BiDi))
+        (pin (num 13) (name 13) (type BiDi))
+        (pin (num 3V3) (name 3V3) (type power_in))
+        (pin (num AD0) (name AD0) (type BiDi))
+        (pin (num AD1) (name AD1) (type BiDi))
+        (pin (num AD2) (name AD2) (type BiDi))
+        (pin (num AD3) (name AD3) (type BiDi))
+        (pin (num AD4) (name AD4) (type BiDi))
+        (pin (num AD5) (name AD5) (type BiDi))
+        (pin (num AREF) (name AREF) (type power_in))
+        (pin (num GND1) (name GND1) (type power_in))
+        (pin (num GND2) (name GND2) (type power_in))
+        (pin (num GND3) (name GND3) (type power_in))
+        (pin (num RST) (name RST) (type input))
+        (pin (num V_IN) (name V_IN) (type power_in))))
+    (libpart (lib mcp4921) (part MCP4921)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) MCP4921)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name VCC) (type passive))
+        (pin (num 2) (name CS) (type passive))
+        (pin (num 3) (name SCK) (type passive))
+        (pin (num 4) (name SDI) (type passive))
+        (pin (num 5) (name LDAC) (type input))
+        (pin (num 6) (name VREF) (type power_in))
+        (pin (num 7) (name AVSS) (type power_out))
+        (pin (num 8) (name VOUT) (type passive))))
+    (libpart (lib custom_parts) (part TCA0372)
+      (description "Dual Op amp (low power)")
+      (docs onsemi/mc33178.pdf)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) TCA0372)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type output))
+        (pin (num 2) (name V+) (type power_in))
+        (pin (num 3) (name ~) (type output))
+        (pin (num 4) (name V-) (type power_in))
+        (pin (num 5) (name -) (type input))
+        (pin (num 6) (name +) (type input))
+        (pin (num 7) (name +) (type input))
+        (pin (num 8) (name -) (type input)))))
+  (libraries
+    (library (logical device)
+      (uri "C:\\Program Files\\KiCad\\share\\library\\device.lib"))
+    (library (logical conn)
+      (uri "C:\\Program Files\\KiCad\\share\\library\\conn.lib"))
+    (library (logical linear)
+      (uri "C:\\Program Files\\KiCad\\share\\library\\linear.lib"))
+    (library (logical arduino_shieldsNCL)
+      (uri arduino_shieldsNCL.lib))
+    (library (logical mcp4921)
+      (uri mcp4921.lib))
+    (library (logical custom_parts)
+      (uri custom_parts.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref R2) (pin 1))
+      (node (ref C3) (pin 2))
+      (node (ref C4) (pin 1))
+      (node (ref U1) (pin 5))
+      (node (ref U1) (pin 7))
+      (node (ref P1) (pin 2))
+      (node (ref P2) (pin 1))
+      (node (ref P3) (pin 2))
+      (node (ref C1) (pin 2))
+      (node (ref R5) (pin 1))
+      (node (ref SHIELD1) (pin GND1))
+      (node (ref SHIELD1) (pin GND2))
+      (node (ref SHIELD1) (pin GND3))
+      (node (ref D2) (pin 2))
+      (node (ref R9) (pin 2))
+      (node (ref C2) (pin 2))
+      (node (ref D1) (pin 2)))
+    (net (code 2) (name "")
+      (node (ref R7) (pin 1))
+      (node (ref D1) (pin 1)))
+    (net (code 3) (name +5V)
+      (node (ref R7) (pin 2))
+      (node (ref C2) (pin 1))
+      (node (ref U1) (pin 1))
+      (node (ref SHIELD1) (pin 5V)))
+    (net (code 4) (name "")
+      (node (ref D3) (pin 1))
+      (node (ref R9) (pin 1)))
+    (net (code 5) (name "")
+      (node (ref R8) (pin 1))
+      (node (ref D2) (pin 1)))
+    (net (code 6) (name "")
+      (node (ref U3) (pin 3))
+      (node (ref R2) (pin 2))
+      (node (ref R1) (pin 1))
+      (node (ref C1) (pin 1)))
+    (net (code 7) (name "")
+      (node (ref F1) (pin 1))
+      (node (ref U2) (pin 3))
+      (node (ref R6) (pin 2)))
+    (net (code 8) (name VSS)
+      (node (ref D3) (pin 2))
+      (node (ref U2) (pin 4))
+      (node (ref P2) (pin 2))
+      (node (ref U3) (pin 4))
+      (node (ref C4) (pin 2)))
+    (net (code 9) (name "")
+      (node (ref P3) (pin 1))
+      (node (ref F1) (pin 2)))
+    (net (code 10) (name "")
+      (node (ref U3) (pin 5)))
+    (net (code 11) (name "")
+      (node (ref U3) (pin 1)))
+    (net (code 12) (name "")
+      (node (ref SHIELD1) (pin AREF)))
+    (net (code 13) (name "")
+      (node (ref SHIELD1) (pin 12)))
+    (net (code 14) (name "")
+      (node (ref SHIELD1) (pin 6)))
+    (net (code 15) (name "")
+      (node (ref SHIELD1) (pin 5)))
+    (net (code 16) (name "")
+      (node (ref SHIELD1) (pin 4)))
+    (net (code 17) (name "")
+      (node (ref SHIELD1) (pin 3)))
+    (net (code 18) (name MOSI)
+      (node (ref U1) (pin 4))
+      (node (ref SHIELD1) (pin 11)))
+    (net (code 19) (name "")
+      (node (ref SHIELD1) (pin 2)))
+    (net (code 20) (name CLK)
+      (node (ref U1) (pin 3))
+      (node (ref SHIELD1) (pin 13)))
+    (net (code 21) (name VDD)
+      (node (ref R1) (pin 2))
+      (node (ref U2) (pin 2))
+      (node (ref U3) (pin 7))
+      (node (ref R8) (pin 2))
+      (node (ref C3) (pin 1))
+      (node (ref P1) (pin 1)))
+    (net (code 22) (name "")
+      (node (ref SHIELD1) (pin V_IN)))
+    (net (code 23) (name "")
+      (node (ref SHIELD1) (pin 1)))
+    (net (code 24) (name "")
+      (node (ref SHIELD1) (pin 0)))
+    (net (code 25) (name "")
+      (node (ref SHIELD1) (pin AD5)))
+    (net (code 26) (name "")
+      (node (ref SHIELD1) (pin AD4)))
+    (net (code 27) (name "")
+      (node (ref SHIELD1) (pin AD3)))
+    (net (code 28) (name "")
+      (node (ref SHIELD1) (pin AD2)))
+    (net (code 29) (name "")
+      (node (ref SHIELD1) (pin AD1)))
+    (net (code 30) (name "")
+      (node (ref SHIELD1) (pin AD0)))
+    (net (code 31) (name "")
+      (node (ref SHIELD1) (pin 3V3)))
+    (net (code 32) (name "")
+      (node (ref SHIELD1) (pin RST)))
+    (net (code 33) (name "")
+      (node (ref SHIELD1) (pin 9))
+      (node (ref JP1) (pin 3)))
+    (net (code 34) (name "")
+      (node (ref JP1) (pin 7))
+      (node (ref SHIELD1) (pin 7)))
+    (net (code 35) (name "")
+      (node (ref JP1) (pin 5))
+      (node (ref SHIELD1) (pin 8)))
+    (net (code 36) (name "")
+      (node (ref JP1) (pin 1))
+      (node (ref SHIELD1) (pin 10)))
+    (net (code 37) (name "")
+      (node (ref JP1) (pin 4))
+      (node (ref JP1) (pin 6))
+      (node (ref JP1) (pin 2))
+      (node (ref JP1) (pin 8))
+      (node (ref U1) (pin 2)))
+    (net (code 38) (name VREF)
+      (node (ref R3) (pin 1))
+      (node (ref U3) (pin 2))
+      (node (ref U1) (pin 6))
+      (node (ref T1) (pin 1))
+      (node (ref U3) (pin 6)))
+    (net (code 39) (name DAC_OUT)
+      (node (ref U1) (pin 8))
+      (node (ref U2) (pin 7)))
+    (net (code 40) (name "")
+      (node (ref R5) (pin 2))
+      (node (ref RV1) (pin 1)))
+    (net (code 41) (name "")
+      (node (ref R6) (pin 1))
+      (node (ref RV1) (pin 3)))
+    (net (code 42) (name "")
+      (node (ref R3) (pin 2))
+      (node (ref U2) (pin 8))
+      (node (ref R4) (pin 1)))
+    (net (code 43) (name "")
+      (node (ref U2) (pin 6))
+      (node (ref U2) (pin 1))
+      (node (ref R4) (pin 2)))
+    (net (code 44) (name "")
+      (node (ref U2) (pin 5))
+      (node (ref RV1) (pin 2)))))

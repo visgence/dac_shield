@@ -39,7 +39,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Power DAC Shield"
-Date "11 aug 2013"
+Date "21 sep 2013"
 Rev ""
 Comp "Visgence Inc."
 Comment1 ""
@@ -303,8 +303,6 @@ Wire Wire Line
 	5900 5200 6050 5200
 Wire Wire Line
 	6550 5200 6550 4550
-Wire Wire Line
-	6350 4550 7450 4550
 $Comp
 L R R5
 U 1 1 51E307BD
@@ -871,4 +869,19 @@ F 3 "" H 5750 2300 60  0000 C CNN
 	1    5750 2300
 	1    0    0    -1  
 $EndComp
+$Comp
+L FUSE F1
+U 1 1 523DF665
+P 7000 4550
+F 0 "F1" H 7100 4600 40  0000 C CNN
+F 1 "FUSE" H 6900 4500 40  0000 C CNN
+F 2 "~" H 7000 4550 60  0000 C CNN
+F 3 "~" H 7000 4550 60  0000 C CNN
+	1    7000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 4550 7250 4550
+Wire Wire Line
+	6750 4550 6350 4550
 $EndSCHEMATC
