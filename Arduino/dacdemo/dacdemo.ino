@@ -2,6 +2,7 @@
 #include <SPI.h>
 #include <math.h>
 #include <avr/pgmspace.h>
+//#include "Timer1.h"
 
 #define SS0 (1 << 2) //Slave Select 0 PORTB
 #define SS1 (1 << 1) //Slave Select 0 PORTB
@@ -30,9 +31,18 @@ prog_uchar sinetable[256] PROGMEM = {
 // set pin 10 as the slave select for the digital pot:
 const int ss0 = 10;
 const int ss1 = 9;
+
 uint8_t phase;
+uint8_t freq_0;
+uint8_t freq_1;
+
 int data0;
 int data1;
+
+uint8_t freqCounter_0;
+uint8_t freqCounter_1;
+
+//TODO - not needed?
 int phase_count;
 char mode;
 
@@ -52,45 +62,46 @@ void setup() {
   //SPI.setClockDivider(SPI_CLOCK_DIV8);
   data0 =0;
   data1 =0;
-  phase = 64;
+  phase = 64; //90 degrees in our 256 value sine table
   phase_count =0;
-  mode = digitalRead(7);
+  mode = 1; //TODO: mode not used
 
+  //initialize timer for sampling
+  //Timer1.initialize(1000); //1kHz
 }
 
-unsigned char i;
 
+uint8_t i;
+uint8_t j;
+uint8_t clock_divider;
 
-void loop() {
- 
-  phase = (analogRead(A0)/4);
- 
-
-  if(mode){ 
+void loop() { 
+    //phase = (analogRead(A0)/4);
+    sample();
     
+    i++;
+    
+    if (clock_divider == 0)
+        j++;
+    
+    clock_divider++;
+    clock_divider %= 2;
 
-      for(i=0;i<0xff;i++) {
-      
-        data0 = (int) pgm_read_word_near(sinetable + i) * (int)16; 
-        data1 = (int) pgm_read_word_near(sinetable + ((i+phase)%256)) * (int)16; 
+    i %= 0xff;
+    j %= 0xff;
 
-        //data= (int) (sin(2.0 * 3.14159 * double(i)/double(4095)) *(4096/2) + (4096/2));
-        writeMCP492x(data0, 0x30,SS0);
-        writeMCP492x(data1, 0x30,SS1);
-        //delayMicroseconds(10);
-        
-      }
-      phase_count++;
-  }
-  
-  else {
-        writeMCP492x(phase*16, 0x30,SS1);
-  }
-
+    //phase_count++;
 }
 
-  
+void sample(){
+    if(freqCounter_0 == 0)
+    data0 = (int) pgm_read_word_near(sinetable + i) * (int)16; 
+    data1 = (int) pgm_read_word_near(sinetable + ((j+phase)%256)) * (int)16; 
 
+    //data= (int) (sin(2.0 * 3.14159 * double(i)/double(4095)) *(4096/2) + (4096/2));
+    writeMCP492x(data0, 0x30,SS0);
+    writeMCP492x(data1, 0x30,SS1);
+}
 
 
 void writeMCP492x(uint16_t data, uint8_t config,uint8_t ss) {
@@ -107,7 +118,6 @@ void writeMCP492x(uint16_t data, uint8_t config,uint8_t ss) {
   // Send second 8 bits
   SPI.transfer(lower_msg);
   PORTB |= ss;
-
 }
 
 
