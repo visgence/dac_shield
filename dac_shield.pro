@@ -1,6 +1,6 @@
-update=9/21/2013 1:49:06 PM
+update=7/22/2014 9:53:13 PM
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=
@@ -43,11 +43,6 @@ LibName30=valves
 LibName31=arduino_shieldsNCL
 LibName32=mcp4921
 LibName33=custom_parts
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [general]
 version=1
 [pcbnew]
@@ -70,7 +65,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.127000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -89,3 +83,10 @@ LibName15=pga_sockets
 LibName16=valves
 LibName17=arduino_shields
 LibName18=custom
+LibName19=../visgence_parts/visgence_parts
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

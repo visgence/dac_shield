@@ -1,31 +1,31 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 9/22/2013 11:31:48 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 7/22/2014 9:54:58 PM
 
 BeginCmp
 TimeStamp = /51E82508;
 Reference = C1;
 ValeurCmp = 100n;
-IdModule  = SM1206POL;
+IdModule  = SM1206_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E825BA;
 Reference = C2;
 ValeurCmp = 47u;
-IdModule  = SM1206POL;
+IdModule  = SM1206POL_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E82CAF;
 Reference = C3;
 ValeurCmp = 1u;
-IdModule  = SM1206POL;
+IdModule  = SM1206_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E82BF5;
 Reference = C4;
 ValeurCmp = 1u;
-IdModule  = SM1206POL;
+IdModule  = SM1206_VIS;
 EndCmp
 
 BeginCmp
@@ -53,7 +53,7 @@ BeginCmp
 TimeStamp = /523DF665;
 Reference = F1;
 ValeurCmp = FUSE;
-IdModule  = SM1812;
+IdModule  = SM1210L;
 EndCmp
 
 BeginCmp
@@ -88,63 +88,63 @@ BeginCmp
 TimeStamp = /51E30B0D;
 Reference = R1;
 ValeurCmp = 22k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E30B19;
 Reference = R2;
 ValeurCmp = 10k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E3081F;
 Reference = R3;
 ValeurCmp = 10k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E30590;
 Reference = R4;
 ValeurCmp = 10k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E307BD;
 Reference = R5;
 ValeurCmp = 12k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E30757;
 Reference = R6;
 ValeurCmp = 33k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E8268F;
 Reference = R7;
 ValeurCmp = 1k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E827A8;
 Reference = R8;
 ValeurCmp = 1k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp
 TimeStamp = /51E82914;
 Reference = R9;
 ValeurCmp = 1k;
-IdModule  = SM0603;
+IdModule  = SM0603_VIS;
 EndCmp
 
 BeginCmp

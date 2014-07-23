@@ -39,7 +39,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Power DAC Shield"
-Date "21 sep 2013"
+Date "23 jul 2014"
 Rev ""
 Comp "Visgence Inc."
 Comment1 ""
@@ -232,7 +232,7 @@ F 1 "10k" H 5650 5200 50  0000 C CNN
 F 2 "~" H 5650 5200 60  0000 C CNN
 F 3 "~" H 5650 5200 60  0000 C CNN
 	1    5650 5200
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L VSS #PWR06
