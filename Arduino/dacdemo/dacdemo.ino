@@ -1,11 +1,24 @@
+/////////////////////////////////////////////////////////////////////////////////
+//Power DAC Shield Demo for Arduino Uno
+//This demo produces a sine wave on SS0 and a 180 degree shifted sine wave on SS1
+//By using two shields and the X and Y inputs,a circule can be drawn on a scope
+//2014 Visgence Inc
+/////////////////////////////////////////////////////////////////////////////////
 // inslude the SPI library:
 #include <SPI.h>
-#include <math.h>
 #include <avr/pgmspace.h>
-//#include "Timer1.h"
 
 #define SS0 (1 << 2) //Slave Select 0 PORTB
-#define SS1 (1 << 1) //Slave Select 0 PORTB
+#define SS0PORT &PORTB   
+
+#define SS1 (1 << 1) //Slave Select 1 PORTB
+#define SS1PORT &PORTB
+
+#define SS2 (1 << 0) //Slave Select 2 PORTB
+#define SS2PORT &PORTB
+
+#define SS3 (1 << 7) //Slave Select 2 PORTD
+#define SS3PORT &PORTD
 
 
 prog_uchar sinetable[256] PROGMEM = {
@@ -31,6 +44,8 @@ prog_uchar sinetable[256] PROGMEM = {
 // set pin 10 as the slave select for the digital pot:
 const int ss0 = 10;
 const int ss1 = 9;
+const int ss2 = 8;
+const int ss3 = 7;
 
 uint8_t phase;
 uint8_t freq_0;
@@ -39,85 +54,60 @@ uint8_t freq_1;
 int data0;
 int data1;
 
-uint8_t freqCounter_0;
-uint8_t freqCounter_1;
-
-//TODO - not needed?
-int phase_count;
-char mode;
-
 void setup() {
   // set the slaveSelectPin as an output:
 
   pinMode (ss0, OUTPUT);
   pinMode (ss1, OUTPUT);
-  pinMode (7, INPUT);
-  pinMode (3, OUTPUT);
-  digitalWrite(1,HIGH);
-
-  // initialize SPI:
+  pinMode (ss2, OUTPUT);
+  pinMode (ss3, OUTPUT);
+  
+    // initialize SPI:
   SPI.begin(); 
   SPI.setDataMode(SPI_MODE0);
-  //SPI.setBitOrder(MSBFIRST);
-  //SPI.setClockDivider(SPI_CLOCK_DIV8);
+
   data0 =0;
   data1 =0;
-  phase = 64; //90 degrees in our 256 value sine table
-  phase_count =0;
-  mode = 1; //TODO: mode not used
-
-  //initialize timer for sampling
-  //Timer1.initialize(1000); //1kHz
+  phase = 64; //90 degrees in our 256 value sine table  
 }
 
 
 uint8_t i;
-uint8_t j;
 uint8_t clock_divider;
 
 void loop() { 
-    //phase = (analogRead(A0)/4);
+  
     sample();
-    
     i++;
-    
-    if (clock_divider == 0)
-        j++;
-    
-    clock_divider++;
-    clock_divider %= 2;
-
-    i %= 0xff;
-    j %= 0xff;
-
-    //phase_count++;
+    i %= 0xff; 
 }
 
 void sample(){
-    if(freqCounter_0 == 0)
+    
     data0 = (int) pgm_read_word_near(sinetable + i) * (int)16; 
-    data1 = (int) pgm_read_word_near(sinetable + ((j+phase)%256)) * (int)16; 
-
-    //data= (int) (sin(2.0 * 3.14159 * double(i)/double(4095)) *(4096/2) + (4096/2));
-    writeMCP492x(data0, 0x30,SS0);
-    writeMCP492x(data1, 0x30,SS1);
+    data1 = (int) pgm_read_word_near(sinetable + ((i+phase)%256)) * (int)16;  
+    writeMCP492x(data0,SS0,SS0PORT);
+    writeMCP492x(data1,SS1,SS1PORT);
 }
 
+//Method to write to the DAC, using direct port for slave select
+void writeMCP492x(uint16_t data,uint8_t ss,volatile uint8_t* slave_port) {
+  // Take the top 4 bits of config and the top 4 valid bits (data is actually a 12 bit number) 
+  //and OR them together
+  uint8_t top_msg = (0x30 & 0xF0) | (0x0F & (data >> 8));
 
-void writeMCP492x(uint16_t data, uint8_t config,uint8_t ss) {
-  // Take the top 4 bits of config and the top 4 valid bits (data is actually a 12 bit number) and or them together
-  uint8_t top_msg = (config & 0xF0) | (0x0F & (data >> 8));
-  
   // Take the bottom octet of data
   uint8_t lower_msg = (data & 0x00FF);
-   
-  // Select our DAC
-  PORTB &= ~ss;
+
+  // Select our DAC, Active LOW
+  *slave_port &= ~ss;
+
   // Send first 8 bits
   SPI.transfer(top_msg);
   // Send second 8 bits
   SPI.transfer(lower_msg);
-  PORTB |= ss;
-}
 
+  //Deselect DAC
+  *slave_port |= ss;
+}
 
