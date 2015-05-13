@@ -44,7 +44,7 @@ void loop() {
     //writeMCP492x((int)(sin(2.0 * 3.14159 * double(i)/double(4095)) *(4096/2) + (4096/2)),10);
      
     //DriectPort
-    writeMCP492x(value, SS2, SS2PORT);
+    writeMCP492x(value, SS1, SS1PORT);
   }
 }
 
