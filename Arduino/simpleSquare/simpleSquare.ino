@@ -1,43 +1,50 @@
 /////////////////////////////////////////////////////////////////////////////////
-//Sine Table Lookup
-//This program generates a 1khz square wave
-///2014 Visgence Inc
+//simpleSquare
+//This program generates a 1khz (target) square wave
+//The actual wave is closer to 975HZ, due to various delays.
+///(c) 2014-2015 Visgence Inc
 /////////////////////////////////////////////////////////////////////////////////
 #include <SPI.h>
-#define SS0 (1 << 2) //Slave Select 0 PORTB
-#define SS0PORT &PORTB   
+#define SS1 (1 << 2) //Slave Select 1 PORTB
+#define SS1PORT &PORTB   
 
-#define SS1 (1 << 1) //Slave Select 1 PORTB
-#define SS1PORT &PORTB
-
-#define SS2 (1 << 0) //Slave Select 2 PORTB
+#define SS2 (1 << 1) //Slave Select 2 PORTB
 #define SS2PORT &PORTB
 
-#define SS3 (1 << 7) //Slave Select 2 PORTD
-#define SS3PORT &PORTD
+#define SS3 (1 << 0) //Slave Select 3 PORTB
+#define SS3PORT &PORTB
+
+#define SS4 (1 << 7) //Slave Select 4 PORTD
+#define SS4PORT &PORTD
+
+const int ss1 = 10;
+const int ss2 = 9;
+const int ss3 = 8;
+const int ss4 = 7;
 
 void setup() {
-  // set the slaveSelectPin as an output:
-
-  pinMode (10, OUTPUT);
-  pinMode (11, OUTPUT);
+  // set the slaveSelectPins as an output:
+  pinMode (ss1, OUTPUT);
+  pinMode (ss2, OUTPUT);
+  pinMode (ss3, OUTPUT);
+  pinMode (ss4, OUTPUT);
+  
   // initialize SPI:
   SPI.begin();
   SPI.setDataMode(SPI_MODE0);
 }
 
 void loop() {
-  
   //Generate 1khz square wave using digitalWrite Slave Select
-  //writeMCP492x(4095,10); //Write max voltage to shield 0 (SS pin 10)
+  //writeMCP492x(4095,ss1); //Write max voltage to shield 1
   //delayMicroseconds(500);
-  //writeMCP492x(0,10); //Write min voltage to shield 0 (SS pin 10)
+  //writeMCP492x(0,ss1); //Write min voltage to shield 1
   //delayMicroseconds(500);
   
   //Generate 1khz square wave using direct port writing
-  writeMCP492x(4095,SS0,SS0PORT); //Write max voltage to shield 0
+  writeMCP492x(4095,SS1,SS1PORT); //Write max voltage to shield 0
   delayMicroseconds(500);
-  writeMCP492x(0,SS0,SS0PORT); //Write min voltage to shield 0
+  writeMCP492x(0,SS1,SS1PORT); //Write min voltage to shield 0
   delayMicroseconds(500);
 }
 
