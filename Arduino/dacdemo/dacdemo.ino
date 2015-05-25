@@ -8,20 +8,19 @@
 #include <SPI.h>
 #include <avr/pgmspace.h>
 
-#define SS0 (1 << 2) //Slave Select 0 PORTB
-#define SS0PORT &PORTB   
+#define SS1 (1 << 2) //Slave Select 0 PORTB
+#define SS1PORT &PORTB   
 
-#define SS1 (1 << 1) //Slave Select 1 PORTB
-#define SS1PORT &PORTB
-
-#define SS2 (1 << 0) //Slave Select 2 PORTB
+#define SS2 (1 << 1) //Slave Select 1 PORTB
 #define SS2PORT &PORTB
 
-#define SS3 (1 << 7) //Slave Select 2 PORTD
-#define SS3PORT &PORTD
+#define SS3 (1 << 0) //Slave Select 2 PORTB
+#define SS3PORT &PORTB
 
+#define SS4 (1 << 7) //Slave Select 2 PORTD
+#define SS4PORT &PORTD
 
-prog_uchar sinetable[256] PROGMEM = {
+const unsigned char sinetable[256] PROGMEM = {
   128,131,134,137,140,143,146,149,152,156,159,162,165,168,171,174,
   176,179,182,185,188,191,193,196,199,201,204,206,209,211,213,216,
   218,220,222,224,226,228,230,232,234,236,237,239,240,242,243,245,
@@ -40,12 +39,10 @@ prog_uchar sinetable[256] PROGMEM = {
   79, 81, 84, 87, 90, 93, 96, 99, 103,106,109,112,115,118,121,124
 };
 
-
-// set pin 10 as the slave select for the digital pot:
-const int ss0 = 10;
-const int ss1 = 9;
-const int ss2 = 8;
-const int ss3 = 7;
+const int ss1 = 10;
+const int ss2 = 9;
+const int ss3 = 8;
+const int ss4 = 7;
 
 uint8_t phase;
 uint8_t freq_0;
@@ -57,10 +54,10 @@ int data1;
 void setup() {
   // set the slaveSelectPin as an output:
 
-  pinMode (ss0, OUTPUT);
   pinMode (ss1, OUTPUT);
   pinMode (ss2, OUTPUT);
   pinMode (ss3, OUTPUT);
+  pinMode (ss4, OUTPUT);
   
     // initialize SPI:
   SPI.begin(); 
@@ -86,8 +83,8 @@ void sample(){
     
     data0 = (int) pgm_read_word_near(sinetable + i) * (int)16; 
     data1 = (int) pgm_read_word_near(sinetable + ((i+phase)%256)) * (int)16;  
-    writeMCP492x(data0,SS0,SS0PORT);
-    writeMCP492x(data1,SS1,SS1PORT);
+    writeMCP492x(data0,SS1,SS1PORT); //write to shield 1
+    writeMCP492x(data1,SS2,SS2PORT); //write to shield 2
 }
 
 //Method to write to the DAC, using direct port for slave select
