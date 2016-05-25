@@ -368,7 +368,7 @@
       (net 21 N-000044))
     (pad 3 thru_hole circle (at 2.54 2.54) (size 1.524 1.524) (drill 0.9652) (layers *.Cu *.Mask F.SilkS)
       (net 17 N-000040))
-    (model ${KIPRJMOD}/KiModels/Potentiometer_Triwood_RM-065.wrl
+    (model ${KIPRJMOD}/KiModels/Potentiometer_Triwood_RM-065_WColor.wrl
       (at (xyz -0.1 -0.1 -0.02))
       (scale (xyz 4 4 4))
       (rotate (xyz 0 0 0))
@@ -813,7 +813,7 @@
       (net 6 N-000002))
     (pad 2 smd rect (at 0.7493 0) (size 0.79756 0.79756) (layers F.Cu F.Paste F.Mask)
       (net 4 GND))
-    (model ${KIPRJMOD}/dac_shield/KiModels/LED-0805.wrl
+    (model ${KIPRJMOD}/KiModels/LED-0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.6 0.6 0.6))
       (rotate (xyz 0 0 0))
@@ -1750,8 +1750,8 @@
   (segment (start 53.086 58.9536) (end 56.515 55.5246) (width 0.5) (layer B.Cu) (net 16))
   (segment (start 53.086 72.39) (end 53.086 58.9536) (width 0.5) (layer B.Cu) (net 16))
   (segment (start 50.165 46.482) (end 50.165 45.6602) (width 0.5) (layer F.Cu) (net 17))
-  (segment (start 49.53 45.0252) (end 49.53 41.91) (width 0.5) (layer F.Cu) (net 17))
   (segment (start 50.165 45.6602) (end 49.53 45.0252) (width 0.5) (layer F.Cu) (net 17))
+  (segment (start 49.53 45.0252) (end 49.53 41.91) (width 0.5) (layer F.Cu) (net 17))
   (segment (start 44.45 45.1522) (end 44.45 41.91) (width 0.5) (layer F.Cu) (net 18))
   (segment (start 43.942 45.6602) (end 44.45 45.1522) (width 0.5) (layer F.Cu) (net 18))
   (segment (start 43.942 46.482) (end 43.942 45.6602) (width 0.5) (layer F.Cu) (net 18))
