@@ -1,5 +1,9 @@
 ld files
 #######################
+#Ki work directories
+Blender/
+Fusion/
+KiExports/
 
 ## LaTeX
 *.aux
