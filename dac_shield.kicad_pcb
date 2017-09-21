@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.2-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.6)
 
   (general
     (links 59)
@@ -1588,7 +1588,7 @@
   (gr_line (start 56.896 71.12) (end 56.896 76.2) (angle 90) (layer F.SilkS) (width 0.2))
   (gr_line (start 54.356 71.12) (end 54.356 76.2) (angle 90) (layer F.SilkS) (width 0.2))
   (gr_line (start 51.816 71.12) (end 51.816 76.2) (angle 90) (layer F.SilkS) (width 0.2))
-  (gr_text "2016 Visgence Inc." (at 83.185 72.39) (layer F.SilkS)
+  (gr_text "2017 Visgence Inc." (at 83.185 72.39) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "Power DAC Shield" (at 82.931 75.057) (layer F.SilkS)

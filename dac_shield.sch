@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:dac_shield-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -33,7 +34,7 @@ LIBS:arduino_shieldsNCL
 LIBS:mcp4921
 LIBS:custom_parts
 LIBS:dac_shield-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -129,7 +130,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 2100 5200 1950
 $Comp
-L GND #PWR03
+L GND-RESCUE-dac_shield #PWR03
 U 1 1 51E30124
 P 3900 1550
 F 0 "#PWR03" H 3900 1550 30  0001 C CNN
@@ -151,7 +152,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 1450 3900 1550
 $Comp
-L GND #PWR04
+L GND-RESCUE-dac_shield #PWR04
 U 1 1 51E3017A
 P 1150 2200
 F 0 "#PWR04" H 1150 2200 30  0001 C CNN
@@ -162,7 +163,7 @@ F 3 "" H 1150 2200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L GND-RESCUE-dac_shield #PWR05
 U 1 1 51E30180
 P 6350 2300
 F 0 "#PWR05" H 6350 2300 30  0001 C CNN
@@ -205,7 +206,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 4450 5650 4450
 $Comp
-L R R4
+L R-RESCUE-dac_shield R4
 U 1 1 51E30590
 P 4650 5150
 F 0 "R4" V 4730 5150 40  0000 C CNN
@@ -289,7 +290,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 5050 5650 4650
 $Comp
-L R R6
+L R-RESCUE-dac_shield R6
 U 1 1 51E30757
 P 6300 5200
 F 0 "R6" V 6380 5200 40  0000 C CNN
@@ -304,7 +305,7 @@ Wire Wire Line
 Wire Wire Line
 	6550 5200 6550 4550
 $Comp
-L R R5
+L R-RESCUE-dac_shield R5
 U 1 1 51E307BD
 P 5300 5550
 F 0 "R5" V 5380 5550 40  0000 C CNN
@@ -319,7 +320,7 @@ Wire Wire Line
 Wire Wire Line
 	5300 5200 5400 5200
 $Comp
-L GND #PWR010
+L GND-RESCUE-dac_shield #PWR010
 U 1 1 51E307ED
 P 5300 5950
 F 0 "#PWR010" H 5300 5950 30  0001 C CNN
@@ -332,7 +333,7 @@ $EndComp
 Wire Wire Line
 	5300 5800 5300 5950
 $Comp
-L R R3
+L R-RESCUE-dac_shield R3
 U 1 1 51E3081F
 P 3900 4650
 F 0 "R3" V 3980 4650 40  0000 C CNN
@@ -351,7 +352,7 @@ DAC_OUT
 Text GLabel 4000 4450 0    39   Input ~ 0
 DAC_OUT
 $Comp
-L LM741 U3
+L LM741-RESCUE-dac_shield U3
 U 1 1 51E30A12
 P 2100 4650
 F 0 "U3" H 2250 4800 60  0000 C CNN
@@ -394,7 +395,7 @@ $EndComp
 Wire Wire Line
 	2000 4150 2000 4250
 $Comp
-L R R1
+L R-RESCUE-dac_shield R1
 U 1 1 51E30B0D
 P 1400 4300
 F 0 "R1" V 1480 4300 40  0000 C CNN
@@ -416,7 +417,7 @@ F 3 "" H 1400 3950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L R-RESCUE-dac_shield R2
 U 1 1 51E30B19
 P 1400 4900
 F 0 "R2" V 1480 4900 40  0000 C CNN
@@ -427,7 +428,7 @@ F 3 "~" H 1400 4900 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR014
+L GND-RESCUE-dac_shield #PWR014
 U 1 1 51E30B25
 P 1400 5250
 F 0 "#PWR014" H 1400 5250 30  0001 C CNN
@@ -495,7 +496,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 3100 7500 3250
 $Comp
-L GND #PWR017
+L GND-RESCUE-dac_shield #PWR017
 U 1 1 51E30E0E
 P 7350 3050
 F 0 "#PWR017" H 7350 3050 30  0001 C CNN
@@ -511,7 +512,7 @@ Wire Wire Line
 	7350 3000 7950 3000
 Connection ~ 6550 4550
 $Comp
-L GND #PWR018
+L GND-RESCUE-dac_shield #PWR018
 U 1 1 51E30EF3
 P 7300 4850
 F 0 "#PWR018" H 7300 4850 30  0001 C CNN
@@ -526,7 +527,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 4750 7450 4750
 $Comp
-L C C1
+L C-RESCUE-dac_shield C1
 U 1 1 51E82508
 P 1050 4900
 F 0 "C1" H 1050 5000 40  0000 L CNN
@@ -545,7 +546,7 @@ Wire Wire Line
 Wire Wire Line
 	1050 5150 1400 5150
 $Comp
-L C C2
+L C-RESCUE-dac_shield C2
 U 1 1 51E825BA
 P 4750 2700
 F 0 "C2" H 4750 2800 40  0000 L CNN
@@ -559,7 +560,7 @@ Wire Wire Line
 	4750 2100 4750 2500
 Connection ~ 5200 2100
 $Comp
-L GND #PWR019
+L GND-RESCUE-dac_shield #PWR019
 U 1 1 51E82617
 P 4750 3050
 F 0 "#PWR019" H 4750 3050 30  0001 C CNN
@@ -583,7 +584,7 @@ F 3 "" H 7850 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D1
+L LED-RESCUE-dac_shield D1
 U 1 1 51E82672
 P 7850 1850
 F 0 "D1" H 7850 1950 50  0000 C CNN
@@ -594,7 +595,7 @@ F 3 "~" H 7850 1850 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR021
+L GND-RESCUE-dac_shield #PWR021
 U 1 1 51E8267F
 P 7850 2150
 F 0 "#PWR021" H 7850 2150 30  0001 C CNN
@@ -605,7 +606,7 @@ F 3 "" H 7850 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L R-RESCUE-dac_shield R7
 U 1 1 51E8268F
 P 7850 1300
 F 0 "R7" V 7930 1300 40  0000 C CNN
@@ -629,7 +630,7 @@ F 3 "" H 8200 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L R-RESCUE-dac_shield R8
 U 1 1 51E827A8
 P 8200 1300
 F 0 "R8" V 8280 1300 40  0000 C CNN
@@ -642,7 +643,7 @@ $EndComp
 Wire Wire Line
 	8200 950  8200 1050
 $Comp
-L LED D2
+L LED-RESCUE-dac_shield D2
 U 1 1 51E827FF
 P 8200 1850
 F 0 "D2" H 8200 1950 50  0000 C CNN
@@ -655,7 +656,7 @@ $EndComp
 Wire Wire Line
 	8200 1550 8200 1650
 $Comp
-L GND #PWR023
+L GND-RESCUE-dac_shield #PWR023
 U 1 1 51E82857
 P 8200 2150
 F 0 "#PWR023" H 8200 2150 30  0001 C CNN
@@ -668,7 +669,7 @@ $EndComp
 Wire Wire Line
 	8200 2050 8200 2150
 $Comp
-L GND #PWR024
+L GND-RESCUE-dac_shield #PWR024
 U 1 1 51E828BA
 P 9000 950
 F 0 "#PWR024" H 9000 950 30  0001 C CNN
@@ -679,7 +680,7 @@ F 3 "" H 9000 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L R-RESCUE-dac_shield R9
 U 1 1 51E82914
 P 8750 1300
 F 0 "R9" V 8830 1300 40  0000 C CNN
@@ -696,7 +697,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 850  9000 950 
 $Comp
-L LED D3
+L LED-RESCUE-dac_shield D3
 U 1 1 51E8296F
 P 8750 1850
 F 0 "D3" H 8750 1950 50  0000 C CNN
@@ -726,7 +727,7 @@ Wire Wire Line
 Wire Wire Line
 	7850 2050 7850 2150
 $Comp
-L C C4
+L C-RESCUE-dac_shield C4
 U 1 1 51E82BF5
 P 9100 1600
 F 0 "C4" H 9100 1700 40  0000 L CNN
@@ -745,7 +746,7 @@ Wire Wire Line
 Wire Wire Line
 	9100 2050 9100 1800
 $Comp
-L C C3
+L C-RESCUE-dac_shield C3
 U 1 1 51E82CAF
 P 8450 1600
 F 0 "C3" H 8450 1700 40  0000 L CNN
@@ -764,7 +765,7 @@ Wire Wire Line
 Wire Wire Line
 	8450 2050 8200 2050
 $Comp
-L GND #PWR026
+L GND-RESCUE-dac_shield #PWR026
 U 1 1 51EEC648
 P 6250 2700
 F 0 "#PWR026" H 6250 2700 30  0001 C CNN
