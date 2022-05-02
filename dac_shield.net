@@ -1,384 +1,579 @@
-# EESchema Netlist Version 1.1 created  7/22/2014 9:33:58 PM
-(
- ( /51E2FC01 $noname  SHIELD1 ARDUINO_SHIELD {Lib=ARDUINO_SHIELD}
-  (    0 ? )
-  (    1 ? )
-  (    2 ? )
-  (    3 ? )
-  (    4 ? )
-  (    5 ? )
-  (   5V +5V )
-  (    6 ? )
-  (    7 N-000034 )
-  (    8 N-000035 )
-  (    9 N-000033 )
-  (   10 N-000036 )
-  (   11 MOSI )
-  (   12 ? )
-  (   13 CLK )
-  (  3V3 ? )
-  (  AD0 ? )
-  (  AD1 ? )
-  (  AD2 ? )
-  (  AD3 ? )
-  (  AD4 ? )
-  (  AD5 ? )
-  ( AREF ? )
-  ( GND1 GND )
-  ( GND2 GND )
-  ( GND3 GND )
-  (  RST ? )
-  ( V_IN ? )
- )
- ( /51E3006B $noname  JP1 SLAVE_SEL {Lib=CONN_4X2}
-  (    1 N-000036 )
-  (    2 N-000037 )
-  (    3 N-000033 )
-  (    4 N-000037 )
-  (    5 N-000035 )
-  (    6 N-000037 )
-  (    7 N-000034 )
-  (    8 N-000037 )
- )
- ( /51E30546 $noname  U2 TCA0372 {Lib=TCA0372}
-  (    1 N-000043 )
-  (    2 VDD )
-  (    3 N-000007 )
-  (    4 VSS )
-  (    5 N-000044 )
-  (    6 N-000043 )
-  (    7 DAC_OUT )
-  (    8 N-000042 )
- )
- ( /51E30590 $noname  R4 10k {Lib=R}
-  (    1 N-000042 )
-  (    2 N-000043 )
- )
- ( /51E30660 $noname  RV1 10k {Lib=POT}
-  (    1 N-000041 )
-  (    2 N-000044 )
-  (    3 N-000040 )
- )
- ( /51E30757 $noname  R6 33k {Lib=R}
-  (    1 N-000041 )
-  (    2 N-000007 )
- )
- ( /51E307BD $noname  R5 12k {Lib=R}
-  (    1 GND )
-  (    2 N-000040 )
- )
- ( /51E3081F $noname  R3 10k {Lib=R}
-  (    1 VREF )
-  (    2 N-000042 )
- )
- ( /51E30A12 $noname  U3 LM741 {Lib=LM741}
-  (    1 ? )
-  (    2 VREF )
-  (    3 N-000006 )
-  (    4 VSS )
-  (    5 ? )
-  (    6 VREF )
-  (    7 VDD )
- )
- ( /51E30B0D $noname  R1 22k {Lib=R}
-  (    1 N-000006 )
-  (    2 VDD )
- )
- ( /51E30B19 $noname  R2 10k {Lib=R}
-  (    1 GND )
-  (    2 N-000006 )
- )
- ( /51E82508 $noname  C1 100n {Lib=C}
-  (    1 N-000006 )
-  (    2 GND )
- )
- ( /51E825BA $noname  C2 47u {Lib=C}
-  (    1 +5V )
-  (    2 GND )
- )
- ( /51E82672 $noname  D1 PWR {Lib=LED}
-  (    1 N-000002 )
-  (    2 GND )
- )
- ( /51E8268F $noname  R7 1k {Lib=R}
-  (    1 N-000002 )
-  (    2 +5V )
- )
- ( /51E827A8 $noname  R8 1k {Lib=R}
-  (    1 N-000005 )
-  (    2 VDD )
- )
- ( /51E827FF $noname  D2 POS {Lib=LED}
-  (    1 N-000005 )
-  (    2 GND )
- )
- ( /51E82914 $noname  R9 1k {Lib=R}
-  (    1 N-000004 )
-  (    2 GND )
- )
- ( /51E8296F $noname  D3 NEG {Lib=LED}
-  (    1 N-000004 )
-  (    2 VSS )
- )
- ( /51E82BF5 $noname  C4 1u {Lib=C}
-  (    1 GND )
-  (    2 VSS )
- )
- ( /51E82CAF $noname  C3 1u {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5207C384 $noname  P1 CONN_2 {Lib=CONN_2}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5207C393 $noname  P2 CONN_2 {Lib=CONN_2}
-  (    1 GND )
-  (    2 VSS )
- )
- ( /5207C3A2 $noname  P3 CONN_2 {Lib=CONN_2}
-  (    1 N-000009 )
-  (    2 GND )
- )
- ( /5207C58D $noname  T1 VrefTest {Lib=CONN_1}
-  (    1 VREF )
- )
- ( /5207D003 $noname  U1 MCP4921 {Lib=MCP4921}
-  (    1 +5V )
-  (    2 N-000037 )
-  (    3 CLK )
-  (    4 MOSI )
-  (    5 GND )
-  (    6 VREF )
-  (    7 GND )
-  (    8 DAC_OUT )
- )
- ( /523DF665 $noname  F1 FUSE {Lib=FUSE}
-  (    1 N-000007 )
-  (    2 N-000009 )
- )
-)
-*
-{ Allowed footprints by component:
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R6
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R5
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R7
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R8
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R9
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C4
- SM*
- C?
- C1-1
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$endfootprintlist
-}
-{ Pin List by Nets
-Net 1 "GND" "GND"
- R2 1
- C3 2
- C4 1
- U1 5
- U1 7
- P1 2
- P2 1
- P3 2
- C1 2
- R5 1
- SHIELD1 GND1
- SHIELD1 GND2
- SHIELD1 GND3
- D2 2
- R9 2
- C2 2
- D1 2
-Net 2 "" ""
- R7 1
- D1 1
-Net 3 "+5V" "+5V"
- R7 2
- C2 1
- U1 1
- SHIELD1 5V
-Net 4 "" ""
- D3 1
- R9 1
-Net 5 "" ""
- R8 1
- D2 1
-Net 6 "" ""
- U3 3
- R2 2
- R1 1
- C1 1
-Net 7 "" ""
- F1 1
- U2 3
- R6 2
-Net 8 "VSS" "VSS"
- D3 2
- U2 4
- P2 2
- U3 4
- C4 2
-Net 9 "" ""
- P3 1
- F1 2
-Net 18 "MOSI" "MOSI"
- U1 4
- SHIELD1 11
-Net 20 "CLK" "CLK"
- U1 3
- SHIELD1 13
-Net 21 "VDD" "VDD"
- R1 2
- U2 2
- U3 7
- R8 2
- C3 1
- P1 1
-Net 33 "" ""
- SHIELD1 9
- JP1 3
-Net 34 "" ""
- JP1 7
- SHIELD1 7
-Net 35 "" ""
- JP1 5
- SHIELD1 8
-Net 36 "" ""
- JP1 1
- SHIELD1 10
-Net 37 "" ""
- JP1 4
- JP1 6
- JP1 2
- JP1 8
- U1 2
-Net 38 "VREF" "VREF"
- R3 1
- U3 2
- U1 6
- T1 1
- U3 6
-Net 39 "DAC_OUT" "DAC_OUT"
- U1 8
- U2 7
-Net 40 "" ""
- R5 2
- RV1 3
-Net 41 "" ""
- R6 1
- RV1 1
-Net 42 "" ""
- R3 2
- U2 8
- R4 1
-Net 43 "" ""
- U2 6
- U2 1
- R4 2
-Net 44 "" ""
- U2 5
- RV1 2
-}
-#End
+(export (version "E")
+  (design
+    (source "C:\\Users\\esalazar\\git\\dac_shield\\dac_shield.kicad_sch")
+    (date "5/2/2022 2:28:57 PM")
+    (tool "Eeschema (6.0.4)")
+    (sheet (number "1") (name "/") (tstamps "/")
+      (title_block
+        (title "Power DAC Shield")
+        (company "Visgence Inc.")
+        (rev)
+        (date "23 jul 2014")
+        (source "dac_shield.kicad_sch")
+        (comment (number "1") (value ""))
+        (comment (number "2") (value ""))
+        (comment (number "3") (value ""))
+        (comment (number "4") (value ""))
+        (comment (number "5") (value ""))
+        (comment (number "6") (value ""))
+        (comment (number "7") (value ""))
+        (comment (number "8") (value ""))
+        (comment (number "9") (value "")))))
+  (components
+    (comp (ref "C1")
+      (value "100n")
+      (footprint "custom-footprints:SM1206_VIS")
+      (libsource (lib "Device") (part "C") (description "Unpolarized capacitor"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e82508"))
+    (comp (ref "C2")
+      (value "47u")
+      (footprint "custom-footprints:SM1206POL_VIS")
+      (libsource (lib "Device") (part "C") (description "Unpolarized capacitor"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e825ba"))
+    (comp (ref "C3")
+      (value "1u")
+      (footprint "custom-footprints:SM1206_VIS")
+      (libsource (lib "Device") (part "C") (description "Unpolarized capacitor"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e82caf"))
+    (comp (ref "C4")
+      (value "1u")
+      (footprint "custom-footprints:SM1206_VIS")
+      (libsource (lib "Device") (part "C") (description "Unpolarized capacitor"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e82bf5"))
+    (comp (ref "D1")
+      (value "PWR")
+      (footprint "LED_SMD:LED_0603_1608Metric")
+      (libsource (lib "Device") (part "LED") (description "Light emitting diode"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e82672"))
+    (comp (ref "D2")
+      (value "POS")
+      (footprint "LED_SMD:LED_0603_1608Metric")
+      (libsource (lib "Device") (part "LED") (description "Light emitting diode"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e827ff"))
+    (comp (ref "D3")
+      (value "NEG")
+      (footprint "LED_SMD:LED_0603_1608Metric")
+      (libsource (lib "Device") (part "LED") (description "Light emitting diode"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e8296f"))
+    (comp (ref "F1")
+      (value "FUSE")
+      (footprint "custom-footprints:SM1210L")
+      (libsource (lib "custom-symbols") (part "FUSE") (description ""))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-0000523df665"))
+    (comp (ref "JP1")
+      (value "SLAVE_SEL")
+      (footprint "custom-footprints:pin_array_4x2")
+      (libsource (lib "custom-symbols") (part "CONN_4X2") (description ""))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e3006b"))
+    (comp (ref "P1")
+      (value "CONN_2")
+      (footprint "custom-footprints:bornier2")
+      (libsource (lib "Connector") (part "Screw_Terminal_01x02") (description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-00005207c384"))
+    (comp (ref "P2")
+      (value "CONN_2")
+      (footprint "custom-footprints:bornier2")
+      (libsource (lib "Connector") (part "Screw_Terminal_01x02") (description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-00005207c393"))
+    (comp (ref "P3")
+      (value "CONN_2")
+      (footprint "custom-footprints:bornier2")
+      (libsource (lib "Connector") (part "Screw_Terminal_01x02") (description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-00005207c3a2"))
+    (comp (ref "R1")
+      (value "22k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30b0d"))
+    (comp (ref "R2")
+      (value "10k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30b19"))
+    (comp (ref "R3")
+      (value "10k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e3081f"))
+    (comp (ref "R4")
+      (value "10k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30590"))
+    (comp (ref "R5")
+      (value "12k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e307bd"))
+    (comp (ref "R6")
+      (value "33k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30757"))
+    (comp (ref "R7")
+      (value "1k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e8268f"))
+    (comp (ref "R8")
+      (value "1k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e827a8"))
+    (comp (ref "R9")
+      (value "1k")
+      (footprint "Resistor_SMD:R_0603_1608Metric")
+      (libsource (lib "Device") (part "R_US") (description "Resistor, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e82914"))
+    (comp (ref "RV1")
+      (value "10k")
+      (footprint "custom-footprints:Var_resistor")
+      (libsource (lib "Device") (part "R_Potentiometer_US") (description "Potentiometer, US symbol"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30660"))
+    (comp (ref "SHIELD1")
+      (value "ARDUINO_SHIELD")
+      (footprint "custom-footprints:ARDUINO_SHIELD_2_040pins")
+      (libsource (lib "custom-symbols") (part "ARDUINO_SHIELD") (description ""))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e2fc01"))
+    (comp (ref "T1")
+      (value "VrefTest")
+      (footprint "custom-footprints:PINTST")
+      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-00005207c58d"))
+    (comp (ref "U1")
+      (value "MCP4921")
+      (footprint "custom-footprints:DIP-8__300_ELL")
+      (libsource (lib "custom-symbols") (part "MCP4921") (description ""))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-00005207d003"))
+    (comp (ref "U2")
+      (value "TCA0372")
+      (footprint "custom-footprints:DIP-8__300_ELL")
+      (datasheet "www.st.com/resource/en/datasheet/l272.pdf")
+      (libsource (lib "Amplifier_Operational") (part "L272M") (description "Dual Power Operation Amplifier, DIP-8"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30553" "2f957223-e1c2-44f7-b013-7319b2fe4e70" "00000000-0000-0000-0000-000051e30546"))
+    (comp (ref "U3")
+      (value "LM741")
+      (footprint "custom-footprints:DIP-8__300_ELL")
+      (libsource (lib "Amplifier_Operational") (part "LM741") (description "Operational Amplifier, DIP-8/TO-99-8"))
+      (property (name "Sheetname") (value ""))
+      (property (name "Sheetfile") (value "dac_shield.kicad_sch"))
+      (sheetpath (names "/") (tstamps "/"))
+      (tstamps "00000000-0000-0000-0000-000051e30a12")))
+  (libparts
+    (libpart (lib "Amplifier_Operational") (part "L272M")
+      (description "Dual Power Operation Amplifier, DIP-8")
+      (docs "www.st.com/resource/en/datasheet/l272.pdf")
+      (footprints
+        (fp "*DIP*W7.62mm*"))
+      (fields
+        (field (name "Reference") "U")
+        (field (name "Value") "L272M")
+        (field (name "Footprint") "Package_DIP:DIP-8_W7.62mm_LongPads")
+        (field (name "Datasheet") "www.st.com/resource/en/datasheet/l272.pdf"))
+      (pins
+        (pin (num "1") (name "") (type "output"))
+        (pin (num "2") (name "V+") (type "power_in"))
+        (pin (num "3") (name "") (type "output"))
+        (pin (num "4") (name "V-") (type "power_in"))
+        (pin (num "5") (name "-") (type "input"))
+        (pin (num "6") (name "+") (type "input"))
+        (pin (num "7") (name "+") (type "input"))
+        (pin (num "8") (name "-") (type "input"))))
+    (libpart (lib "Amplifier_Operational") (part "LM741")
+      (description "Operational Amplifier, DIP-8/TO-99-8")
+      (docs "http://www.ti.com/lit/ds/symlink/lm741.pdf")
+      (footprints
+        (fp "SOIC*3.9x4.9mm*P1.27mm*")
+        (fp "DIP*W7.62mm*")
+        (fp "TSSOP*3x3mm*P0.65mm*"))
+      (fields
+        (field (name "Reference") "U")
+        (field (name "Value") "LM741")
+        (field (name "Datasheet") "http://www.ti.com/lit/ds/symlink/lm741.pdf"))
+      (pins
+        (pin (num "1") (name "NULL") (type "input"))
+        (pin (num "2") (name "-") (type "input"))
+        (pin (num "3") (name "+") (type "input"))
+        (pin (num "4") (name "V-") (type "power_in"))
+        (pin (num "5") (name "NULL") (type "input"))
+        (pin (num "6") (name "") (type "output"))
+        (pin (num "7") (name "V+") (type "power_in"))
+        (pin (num "8") (name "NC") (type "no_connect"))))
+    (libpart (lib "Connector") (part "Screw_Terminal_01x02")
+      (description "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (docs "~")
+      (footprints
+        (fp "TerminalBlock*:*"))
+      (fields
+        (field (name "Reference") "J")
+        (field (name "Value") "Screw_Terminal_01x02")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "Pin_1") (type "passive"))
+        (pin (num "2") (name "Pin_2") (type "passive"))))
+    (libpart (lib "Connector") (part "TestPoint")
+      (description "test point")
+      (docs "~")
+      (footprints
+        (fp "Pin*")
+        (fp "Test*"))
+      (fields
+        (field (name "Reference") "TP")
+        (field (name "Value") "TestPoint")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "1") (type "passive"))))
+    (libpart (lib "Device") (part "C")
+      (description "Unpolarized capacitor")
+      (docs "~")
+      (footprints
+        (fp "C_*"))
+      (fields
+        (field (name "Reference") "C")
+        (field (name "Value") "C")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "") (type "passive"))
+        (pin (num "2") (name "") (type "passive"))))
+    (libpart (lib "Device") (part "LED")
+      (description "Light emitting diode")
+      (docs "~")
+      (footprints
+        (fp "LED*")
+        (fp "LED_SMD:*")
+        (fp "LED_THT:*"))
+      (fields
+        (field (name "Reference") "D")
+        (field (name "Value") "LED")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "K") (type "passive"))
+        (pin (num "2") (name "A") (type "passive"))))
+    (libpart (lib "Device") (part "R_Potentiometer_US")
+      (description "Potentiometer, US symbol")
+      (docs "~")
+      (footprints
+        (fp "Potentiometer*"))
+      (fields
+        (field (name "Reference") "RV")
+        (field (name "Value") "R_Potentiometer_US")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "1") (type "passive"))
+        (pin (num "2") (name "2") (type "passive"))
+        (pin (num "3") (name "3") (type "passive"))))
+    (libpart (lib "Device") (part "R_US")
+      (description "Resistor, US symbol")
+      (docs "~")
+      (footprints
+        (fp "R_*"))
+      (fields
+        (field (name "Reference") "R")
+        (field (name "Value") "R_US")
+        (field (name "Datasheet") "~"))
+      (pins
+        (pin (num "1") (name "") (type "passive"))
+        (pin (num "2") (name "") (type "passive"))))
+    (libpart (lib "custom-symbols") (part "ARDUINO_SHIELD")
+      (fields
+        (field (name "Reference") "SHIELD")
+        (field (name "Value") "ARDUINO_SHIELD"))
+      (pins
+        (pin (num "0") (name "0") (type "bidirectional"))
+        (pin (num "1") (name "1") (type "bidirectional"))
+        (pin (num "2") (name "2") (type "bidirectional"))
+        (pin (num "3") (name "3") (type "bidirectional"))
+        (pin (num "3V3") (name "3V3") (type "power_in"))
+        (pin (num "4") (name "4") (type "bidirectional"))
+        (pin (num "5") (name "5") (type "bidirectional"))
+        (pin (num "5V") (name "5V") (type "power_in"))
+        (pin (num "6") (name "6") (type "bidirectional"))
+        (pin (num "7") (name "7") (type "bidirectional"))
+        (pin (num "8") (name "8") (type "bidirectional"))
+        (pin (num "9") (name "9") (type "bidirectional"))
+        (pin (num "10") (name "10") (type "bidirectional"))
+        (pin (num "11") (name "11") (type "bidirectional"))
+        (pin (num "12") (name "12") (type "bidirectional"))
+        (pin (num "13") (name "13") (type "bidirectional"))
+        (pin (num "AD0") (name "AD0") (type "bidirectional"))
+        (pin (num "AD1") (name "AD1") (type "bidirectional"))
+        (pin (num "AD2") (name "AD2") (type "bidirectional"))
+        (pin (num "AD3") (name "AD3") (type "bidirectional"))
+        (pin (num "AD4") (name "AD4") (type "bidirectional"))
+        (pin (num "AD5") (name "AD5") (type "bidirectional"))
+        (pin (num "AREF") (name "AREF") (type "power_in"))
+        (pin (num "GND1") (name "GND1") (type "power_in"))
+        (pin (num "GND2") (name "GND2") (type "power_in"))
+        (pin (num "GND3") (name "GND3") (type "power_in"))
+        (pin (num "RST") (name "RST") (type "input"))
+        (pin (num "V_IN") (name "V_IN") (type "power_in"))))
+    (libpart (lib "custom-symbols") (part "CONN_4X2")
+      (fields
+        (field (name "Reference") "P")
+        (field (name "Value") "CONN_4X2"))
+      (pins
+        (pin (num "1") (name "1") (type "passive"))
+        (pin (num "2") (name "2") (type "passive"))
+        (pin (num "3") (name "3") (type "passive"))
+        (pin (num "4") (name "4") (type "passive"))
+        (pin (num "5") (name "5") (type "passive"))
+        (pin (num "6") (name "6") (type "passive"))
+        (pin (num "7") (name "7") (type "passive"))
+        (pin (num "8") (name "8") (type "passive"))))
+    (libpart (lib "custom-symbols") (part "FUSE")
+      (fields
+        (field (name "Reference") "F")
+        (field (name "Value") "FUSE"))
+      (pins
+        (pin (num "1") (name "") (type "input"))
+        (pin (num "2") (name "") (type "input"))))
+    (libpart (lib "custom-symbols") (part "MCP4921")
+      (fields
+        (field (name "Reference") "U")
+        (field (name "Value") "MCP4921"))
+      (pins
+        (pin (num "1") (name "VCC") (type "passive"))
+        (pin (num "2") (name "CS") (type "passive"))
+        (pin (num "3") (name "SCK") (type "passive"))
+        (pin (num "4") (name "SDI") (type "passive"))
+        (pin (num "5") (name "LDAC") (type "input"))
+        (pin (num "6") (name "VREF") (type "input"))
+        (pin (num "7") (name "AVSS") (type "power_out"))
+        (pin (num "8") (name "VOUT") (type "passive")))))
+  (libraries
+    (library (logical "Amplifier_Operational")
+      (uri "C:\\Program Files\\KiCad\\6.0\\share\\kicad\\symbols\\/Amplifier_Operational.kicad_sym"))
+    (library (logical "Connector")
+      (uri "C:\\Program Files\\KiCad\\6.0\\share\\kicad\\symbols\\/Connector.kicad_sym"))
+    (library (logical "Device")
+      (uri "C:\\Program Files\\KiCad\\6.0\\share\\kicad\\symbols\\/Device.kicad_sym"))
+    (library (logical "custom-symbols")
+      (uri "C:\\Users\\esalazar\\git\\dac_shield/custom-symbols.kicad_sym")))
+  (nets
+    (net (code "1") (name "+5V")
+      (node (ref "C2") (pin "1") (pintype "passive"))
+      (node (ref "R7") (pin "2") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "5V") (pinfunction "5V") (pintype "power_in"))
+      (node (ref "U1") (pin "1") (pinfunction "VCC") (pintype "passive")))
+    (net (code "2") (name "CLK")
+      (node (ref "SHIELD1") (pin "13") (pinfunction "13") (pintype "bidirectional"))
+      (node (ref "U1") (pin "3") (pinfunction "SCK") (pintype "passive")))
+    (net (code "3") (name "DAC_OUT")
+      (node (ref "U1") (pin "8") (pinfunction "VOUT") (pintype "passive"))
+      (node (ref "U2") (pin "7") (pinfunction "+") (pintype "input")))
+    (net (code "4") (name "GND")
+      (node (ref "C1") (pin "2") (pintype "passive"))
+      (node (ref "C2") (pin "2") (pintype "passive"))
+      (node (ref "C3") (pin "2") (pintype "passive"))
+      (node (ref "C4") (pin "1") (pintype "passive"))
+      (node (ref "D1") (pin "1") (pinfunction "K") (pintype "passive"))
+      (node (ref "D2") (pin "1") (pinfunction "K") (pintype "passive"))
+      (node (ref "P1") (pin "2") (pinfunction "Pin_2") (pintype "passive"))
+      (node (ref "P2") (pin "1") (pinfunction "Pin_1") (pintype "passive"))
+      (node (ref "P3") (pin "2") (pinfunction "Pin_2") (pintype "passive"))
+      (node (ref "R2") (pin "1") (pintype "passive"))
+      (node (ref "R5") (pin "1") (pintype "passive"))
+      (node (ref "R9") (pin "2") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "GND1") (pinfunction "GND1") (pintype "power_in"))
+      (node (ref "SHIELD1") (pin "GND2") (pinfunction "GND2") (pintype "power_in"))
+      (node (ref "SHIELD1") (pin "GND3") (pinfunction "GND3") (pintype "power_in"))
+      (node (ref "U1") (pin "5") (pinfunction "LDAC") (pintype "input"))
+      (node (ref "U1") (pin "7") (pinfunction "AVSS") (pintype "power_out")))
+    (net (code "5") (name "MOSI")
+      (node (ref "SHIELD1") (pin "11") (pinfunction "11") (pintype "bidirectional"))
+      (node (ref "U1") (pin "4") (pinfunction "SDI") (pintype "passive")))
+    (net (code "6") (name "Net-(C1-Pad1)")
+      (node (ref "C1") (pin "1") (pintype "passive"))
+      (node (ref "R1") (pin "1") (pintype "passive"))
+      (node (ref "R2") (pin "2") (pintype "passive"))
+      (node (ref "U3") (pin "3") (pinfunction "+") (pintype "input")))
+    (net (code "7") (name "Net-(D1-Pad2)")
+      (node (ref "D1") (pin "2") (pinfunction "A") (pintype "passive"))
+      (node (ref "R7") (pin "1") (pintype "passive")))
+    (net (code "8") (name "Net-(D2-Pad2)")
+      (node (ref "D2") (pin "2") (pinfunction "A") (pintype "passive"))
+      (node (ref "R8") (pin "1") (pintype "passive")))
+    (net (code "9") (name "Net-(D3-Pad2)")
+      (node (ref "D3") (pin "2") (pinfunction "A") (pintype "passive"))
+      (node (ref "R9") (pin "1") (pintype "passive")))
+    (net (code "10") (name "Net-(F1-Pad1)")
+      (node (ref "F1") (pin "1") (pintype "input"))
+      (node (ref "R6") (pin "2") (pintype "passive"))
+      (node (ref "U2") (pin "3") (pintype "output")))
+    (net (code "11") (name "Net-(F1-Pad2)")
+      (node (ref "F1") (pin "2") (pintype "input"))
+      (node (ref "P3") (pin "1") (pinfunction "Pin_1") (pintype "passive")))
+    (net (code "12") (name "Net-(JP1-Pad1)")
+      (node (ref "JP1") (pin "1") (pinfunction "1") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "10") (pinfunction "10") (pintype "bidirectional")))
+    (net (code "13") (name "Net-(JP1-Pad2)")
+      (node (ref "JP1") (pin "2") (pinfunction "2") (pintype "passive"))
+      (node (ref "JP1") (pin "4") (pinfunction "4") (pintype "passive"))
+      (node (ref "JP1") (pin "6") (pinfunction "6") (pintype "passive"))
+      (node (ref "JP1") (pin "8") (pinfunction "8") (pintype "passive"))
+      (node (ref "U1") (pin "2") (pinfunction "CS") (pintype "passive")))
+    (net (code "14") (name "Net-(JP1-Pad3)")
+      (node (ref "JP1") (pin "3") (pinfunction "3") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "9") (pinfunction "9") (pintype "bidirectional")))
+    (net (code "15") (name "Net-(JP1-Pad5)")
+      (node (ref "JP1") (pin "5") (pinfunction "5") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "8") (pinfunction "8") (pintype "bidirectional")))
+    (net (code "16") (name "Net-(JP1-Pad7)")
+      (node (ref "JP1") (pin "7") (pinfunction "7") (pintype "passive"))
+      (node (ref "SHIELD1") (pin "7") (pinfunction "7") (pintype "bidirectional")))
+    (net (code "17") (name "Net-(R3-Pad2)")
+      (node (ref "R3") (pin "2") (pintype "passive"))
+      (node (ref "R4") (pin "1") (pintype "passive"))
+      (node (ref "U2") (pin "8") (pinfunction "-") (pintype "input")))
+    (net (code "18") (name "Net-(R4-Pad2)")
+      (node (ref "R4") (pin "2") (pintype "passive"))
+      (node (ref "U2") (pin "1") (pintype "output"))
+      (node (ref "U2") (pin "6") (pinfunction "+") (pintype "input")))
+    (net (code "19") (name "Net-(R5-Pad2)")
+      (node (ref "R5") (pin "2") (pintype "passive"))
+      (node (ref "RV1") (pin "3") (pinfunction "3") (pintype "passive")))
+    (net (code "20") (name "Net-(R6-Pad1)")
+      (node (ref "R6") (pin "1") (pintype "passive"))
+      (node (ref "RV1") (pin "1") (pinfunction "1") (pintype "passive")))
+    (net (code "21") (name "Net-(RV1-Pad2)")
+      (node (ref "RV1") (pin "2") (pinfunction "2") (pintype "passive"))
+      (node (ref "U2") (pin "5") (pinfunction "-") (pintype "input")))
+    (net (code "22") (name "VDD")
+      (node (ref "C3") (pin "1") (pintype "passive"))
+      (node (ref "P1") (pin "1") (pinfunction "Pin_1") (pintype "passive"))
+      (node (ref "R1") (pin "2") (pintype "passive"))
+      (node (ref "R8") (pin "2") (pintype "passive"))
+      (node (ref "U2") (pin "2") (pinfunction "V+") (pintype "power_in"))
+      (node (ref "U3") (pin "7") (pinfunction "V+") (pintype "power_in")))
+    (net (code "23") (name "VREF")
+      (node (ref "R3") (pin "1") (pintype "passive"))
+      (node (ref "T1") (pin "1") (pinfunction "1") (pintype "passive"))
+      (node (ref "U1") (pin "6") (pinfunction "VREF") (pintype "input"))
+      (node (ref "U3") (pin "2") (pinfunction "-") (pintype "input"))
+      (node (ref "U3") (pin "6") (pintype "output")))
+    (net (code "24") (name "VSS")
+      (node (ref "C4") (pin "2") (pintype "passive"))
+      (node (ref "D3") (pin "1") (pinfunction "K") (pintype "passive"))
+      (node (ref "P2") (pin "2") (pinfunction "Pin_2") (pintype "passive"))
+      (node (ref "U2") (pin "4") (pinfunction "V-") (pintype "power_in"))
+      (node (ref "U3") (pin "4") (pinfunction "V-") (pintype "power_in")))
+    (net (code "25") (name "unconnected-(SHIELD1-Pad0)")
+      (node (ref "SHIELD1") (pin "0") (pinfunction "0") (pintype "bidirectional+no_connect")))
+    (net (code "26") (name "unconnected-(SHIELD1-Pad1)")
+      (node (ref "SHIELD1") (pin "1") (pinfunction "1") (pintype "bidirectional+no_connect")))
+    (net (code "27") (name "unconnected-(SHIELD1-Pad2)")
+      (node (ref "SHIELD1") (pin "2") (pinfunction "2") (pintype "bidirectional+no_connect")))
+    (net (code "28") (name "unconnected-(SHIELD1-Pad3)")
+      (node (ref "SHIELD1") (pin "3") (pinfunction "3") (pintype "bidirectional+no_connect")))
+    (net (code "29") (name "unconnected-(SHIELD1-Pad3V3)")
+      (node (ref "SHIELD1") (pin "3V3") (pinfunction "3V3") (pintype "power_in+no_connect")))
+    (net (code "30") (name "unconnected-(SHIELD1-Pad4)")
+      (node (ref "SHIELD1") (pin "4") (pinfunction "4") (pintype "bidirectional+no_connect")))
+    (net (code "31") (name "unconnected-(SHIELD1-Pad5)")
+      (node (ref "SHIELD1") (pin "5") (pinfunction "5") (pintype "bidirectional+no_connect")))
+    (net (code "32") (name "unconnected-(SHIELD1-Pad6)")
+      (node (ref "SHIELD1") (pin "6") (pinfunction "6") (pintype "bidirectional+no_connect")))
+    (net (code "33") (name "unconnected-(SHIELD1-Pad12)")
+      (node (ref "SHIELD1") (pin "12") (pinfunction "12") (pintype "bidirectional+no_connect")))
+    (net (code "34") (name "unconnected-(SHIELD1-PadAD0)")
+      (node (ref "SHIELD1") (pin "AD0") (pinfunction "AD0") (pintype "bidirectional+no_connect")))
+    (net (code "35") (name "unconnected-(SHIELD1-PadAD1)")
+      (node (ref "SHIELD1") (pin "AD1") (pinfunction "AD1") (pintype "bidirectional+no_connect")))
+    (net (code "36") (name "unconnected-(SHIELD1-PadAD2)")
+      (node (ref "SHIELD1") (pin "AD2") (pinfunction "AD2") (pintype "bidirectional+no_connect")))
+    (net (code "37") (name "unconnected-(SHIELD1-PadAD3)")
+      (node (ref "SHIELD1") (pin "AD3") (pinfunction "AD3") (pintype "bidirectional+no_connect")))
+    (net (code "38") (name "unconnected-(SHIELD1-PadAD4)")
+      (node (ref "SHIELD1") (pin "AD4") (pinfunction "AD4") (pintype "bidirectional+no_connect")))
+    (net (code "39") (name "unconnected-(SHIELD1-PadAD5)")
+      (node (ref "SHIELD1") (pin "AD5") (pinfunction "AD5") (pintype "bidirectional+no_connect")))
+    (net (code "40") (name "unconnected-(SHIELD1-PadAREF)")
+      (node (ref "SHIELD1") (pin "AREF") (pinfunction "AREF") (pintype "power_in+no_connect")))
+    (net (code "41") (name "unconnected-(SHIELD1-PadRST)")
+      (node (ref "SHIELD1") (pin "RST") (pinfunction "RST") (pintype "input+no_connect")))
+    (net (code "42") (name "unconnected-(SHIELD1-PadV_IN)")
+      (node (ref "SHIELD1") (pin "V_IN") (pinfunction "V_IN") (pintype "power_in+no_connect")))
+    (net (code "43") (name "unconnected-(U3-Pad1)")
+      (node (ref "U3") (pin "1") (pinfunction "NULL") (pintype "input+no_connect")))
+    (net (code "44") (name "unconnected-(U3-Pad5)")
+      (node (ref "U3") (pin "5") (pinfunction "NULL") (pintype "input+no_connect")))
+    (net (code "45") (name "unconnected-(U3-Pad8)")
+      (node (ref "U3") (pin "8") (pinfunction "NC") (pintype "no_connect")))))
